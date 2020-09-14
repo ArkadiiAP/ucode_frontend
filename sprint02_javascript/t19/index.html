@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Brackets</title>
+  <meta name="description" content="t19. Brackets">
+  <link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css" />
+  </head>
+<body>
+  <h1>Brackets</h1>
+  <script src="https://unpkg.com/mocha/mocha.js"></script>
+  <script>
+    mocha.setup('bdd'); // minimal setup
+  </script>
+  <script src="https://unpkg.com/chai/chai.js"></script>
+  <script>
+    // chai has a lot of stuff, let's make assert global
+    let assert = chai.assert;
+  </script>
+  <script src="js/script.js"></script>
+  <script src="js/test.js"></script>
+  <div id="mocha"></div>
+  <script class="mocha-init">
+    mocha.setup('bdd');
+    mocha.checkLeaks();
+  </script>
+  <script class="mocha-exec">
+    mocha.run();
+  </script>
+</body>
+</html>
